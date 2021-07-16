@@ -1,4 +1,10 @@
-# Dashboard_flask
+# Dashboard-server
 
 Demo implementation of interactive dashboard using Flask and Chart.js.
-Hosted version on Heroku
+
+To view the dashboard on Heroku: https://hgraph-dashboard.herokuapp.com/
+
+To launch on the webserver on localhost in development mode, install the dependencies and run:
+export FLASK_APP=app
+export FLASK_ENV=development
+flask run
