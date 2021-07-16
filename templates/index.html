@@ -59,7 +59,7 @@
               </tr>
             </thead>
             <tbody id="pricetablebody">
-            {% for d in data %}
+            {% for d in table_data %}
               <tr>
                 <td>{{d.commodity}}</td>
                 <td>{{d.price}}</td>
@@ -82,14 +82,9 @@
         <div class="card-body">
 
           <select id="commod_chart" class="form-select form-select-sm" aria-label="Default select example">
-            <option selected value="0">Oil</option>
-            <option value="1">Gold</option>
-            <option value="2">Silver</option>
-            <option value="3">Iron Ore</option>
-            <option value="4">Nickel</option>
-            <option value="5">Steel</option>
-            <option value="6">Soy Beans</option>
-            <option value="7">Wheat</option>
+            {% for d in table_data %}
+            <option value="{{loop.index-1}}">{{d.commodity}}</option>
+            {% endfor %}
           </select>
           
           <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">      
